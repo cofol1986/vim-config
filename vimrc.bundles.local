@@ -1,0 +1,18 @@
+"bundle cscope
+Bundle 'vim-scripts/cscope.vim'
+
+"bundle minibufexpl
+let g:spf13_no_easyWindows = 1
+Bundle 'fholgado/minibufexpl.vim'
+"MBE setting
+let g:miniBufExplMapWindowNavVim =1
+"let g:miniBufExplMapWindowNavArrows = 1
+"let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplModSelTarget = 1
+"fix FileExplorer's window become smaller 
+let g:miniBufExplForceSyntaxEnable = 1
+let g:miniBufExplorerMoreThanOne = 2
+"disable spf13's setting in .vimrc"
+let g:spf13_no_fastTabs = 1
+map <S-H> :bp<CR>
+map <S-L> :bn<CR>
