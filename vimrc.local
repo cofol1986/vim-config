@@ -1,10 +1,23 @@
-colorscheme dark-ruby
+colorscheme desert
+
 set splitright
-imap <C-L> <Esc>
+set nospell
 
-"MBE setting
-let g:miniBufExplMapWindowNavVim =1
-"let g:miniBufExplMapWindowNavArrows =1
-"let g:miniBufExplMapCTabSwitchBufs =1
-"let g:miniBufExplModSelTarget =1
+"make * to be highlighting the current word
+let g:highlighting = 0
+function! Highlighting()
+    if g:highlighting == 1 && @/ =~ '^\\<'.expand('<cword>').'\\>$'
+        let g:highlighting = 0
+        return ":silent nohlsearch\<CR>"
+    endif
+    let @/ = '\<'.expand('<cword>').'\>'
+    let g:highlighting = 1
+    return ":silent set hlsearch\<CR>"
+endfunction
+nnoremap <silent> <expr> * Highlighting()
 
+"multi_cursour_mode enable when press quit-key
+"disable due to confict with ctrl-p
+"let g:multi_cursor_exit_from_visual_mode = 0
+"let g:multi_cursor_exit_from_insert_mode = 0
+nmap <silent> <S-S> :! scp % 172.18.11.50:/root/workdir<CR>
