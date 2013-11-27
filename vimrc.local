@@ -1,4 +1,5 @@
-colorscheme desert
+"colorscheme desert
+colorscheme darkZ
 
 set splitright
 set nospell

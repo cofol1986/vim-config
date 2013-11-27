@@ -2,15 +2,16 @@
 Bundle 'vim-scripts/cscope.vim' 
 
 "bundle minibufexpl
-Bundle 'fholgado/minibufexpl.vim'
+"Bundle 'fholgado/minibufexpl.vim'
 "let g:spf13_no_easyWindows = 1
-let g:spf13_no_fastTabs = 1
-map <S-H> :MBEbp<CR>
-map <S-L> :MBEbn<CR>
-let g:miniBufExplUseSingleClick = 1
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplCycleArround = 1
-let g:miniBufExplSplitBelow = 0
+"let g:spf13_no_fastTabs = 1
+"map <S-H> :MBEbp<CR>
+"map <S-L> :MBEbn<CR>
+"let g:miniBufExplUseSingleClick = 1
+"let g:miniBufExplMapWindowNavVim = 1
+"let g:miniBufExplCycleArround = 1
+"let g:miniBufExplSplitBelow = 0
 "map <Leader>mbe :MBEOpen<cr>
 "map <Leader>mbc :MBEClose<cr>
 "map <Leader>mbt :MBEToggle<cr>
+Bundle 'bufexplorer.zip'
