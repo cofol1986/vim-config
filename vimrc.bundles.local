@@ -1,6 +1,13 @@
 "bundle cscope
 Bundle 'vim-scripts/cscope.vim' 
 
+"vim-airline settings
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#formatter = 'default'
+"let g:airline#extensions#tabline#buffer_nr_show = 1
+"let g:bufferline_echo = 0
+"map <Tab> :bn<cr>
+
 "bundle minibufexpl
 "Bundle 'fholgado/minibufexpl.vim'
 "let g:spf13_no_easyWindows = 1
@@ -14,4 +21,12 @@ Bundle 'vim-scripts/cscope.vim'
 "map <Leader>mbe :MBEOpen<cr>
 "map <Leader>mbc :MBEClose<cr>
 "map <Leader>mbt :MBEToggle<cr>
+
 Bundle 'bufexplorer.zip'
+
+"set gist vim
+"If you want your gist to be private by default
+"let g:gist_post_private = 1
+" Only :w! updates a gist
+let g:gist_update_on_write = 2
+
