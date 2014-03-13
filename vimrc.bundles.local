@@ -22,7 +22,7 @@ Bundle 'vim-scripts/cscope.vim'
 "map <Leader>mbc :MBEClose<cr>
 "map <Leader>mbt :MBEToggle<cr>
 
-Bundle 'bufexplorer.zip'
+"Bundle 'bufexplorer.zip'
 
 "set gist vim
 "If you want your gist to be private by default
