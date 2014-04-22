@@ -22,3 +22,34 @@ nnoremap <silent> <expr> * Highlighting()
 "let g:multi_cursor_exit_from_visual_mode = 0
 "let g:multi_cursor_exit_from_insert_mode = 0
 nmap <silent> <S-S> :! scp % 172.18.11.50:/root/workdir<CR>
+
+" toggle location list and quickfix list
+function! GetBufferList()
+  redir =>buflist
+  silent! ls
+  redir END
+  return buflist
+endfunction
+
+function! ToggleList(bufname, pfx)
+  let buflist = GetBufferList()
+  for bufnum in map(filter(split(buflist, '\n'), 'v:val =~ "'.a:bufname.'"'), 'str2nr(matchstr(v:val, "\\d\\+"))')
+    if bufwinnr(bufnum) != -1
+      exec(a:pfx.'close')
+      return
+    endif
+  endfor
+  if a:pfx == 'l' && len(getloclist(0)) == 0
+      echohl ErrorMsg
+      echo "Location List is Empty."
+      return
+  endif
+  let winnr = winnr()
+  exec(a:pfx.'open')
+  if winnr() != winnr
+    wincmd p
+  endif
+endfunction
+
+nmap <silent> <leader>l :call ToggleList("Location List", 'l')<CR>
+nmap <silent> <leader>c :call ToggleList("Quickfix List", 'c')<CR>
