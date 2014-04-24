@@ -1,5 +1,8 @@
 "bundle cscope
 Bundle 'vim-scripts/cscope.vim' 
+Bundle 'wesleyche/SrcExpl'
+Bundle 'bufexplorer.zip'
+"Bundle 'vim-scripts/Conque-Shell' 
 
 "vim-airline settings
 "let g:airline#extensions#tabline#enabled = 1
@@ -7,22 +10,6 @@ Bundle 'vim-scripts/cscope.vim'
 "let g:airline#extensions#tabline#buffer_nr_show = 1
 "let g:bufferline_echo = 0
 "map <Tab> :bn<cr>
-
-"bundle minibufexpl
-"Bundle 'fholgado/minibufexpl.vim'
-"let g:spf13_no_easyWindows = 1
-"let g:spf13_no_fastTabs = 1
-"map <S-H> :MBEbp<CR>
-"map <S-L> :MBEbn<CR>
-"let g:miniBufExplUseSingleClick = 1
-"let g:miniBufExplMapWindowNavVim = 1
-"let g:miniBufExplCycleArround = 1
-"let g:miniBufExplSplitBelow = 0
-"map <Leader>mbe :MBEOpen<cr>
-"map <Leader>mbc :MBEClose<cr>
-"map <Leader>mbt :MBEToggle<cr>
-
-"Bundle 'bufexplorer.zip'
 
 "set gist vim
 "If you want your gist to be private by default
@@ -33,3 +20,6 @@ let g:gist_update_on_write = 2
 "airline settings
 let g:airline_theme= 'zenburn'
 
+"bufferline settings
+let g:bufferline_rotate = 1
+let g:bufferline_fixed_index = -1 "always last

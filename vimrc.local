@@ -5,6 +5,11 @@ colorscheme darkZ
 set splitright
 set nospell
 
+"buffer nav
+map <S-H> :bp<CR>
+map <S-L> :bn<CR>
+
+
 "make * to be highlighting the current word
 let g:highlighting = 0
 function! Highlighting()
@@ -54,3 +59,29 @@ endfunction
 
 nmap <silent> <leader>l :call ToggleList("Location List", 'l')<CR>
 nmap <silent> <leader>c :call ToggleList("Quickfix List", 'c')<CR>
+
+"cscope settings
+
+
+"delete all other buffers
+
+command! BcloseOthers call <SID>BufCloseOthers()
+function! <SID>BufCloseOthers()
+   let l:currentBufNum   = bufnr("%")
+   let l:alternateBufNum = bufnr("#")
+   for i in range(1,bufnr("$"))
+     if buflisted(i)
+       if i!=l:currentBufNum
+         execute("bdelete ".i)
+       endif
+     endif
+   endfor
+endfunction
+map <leader>bdo :BcloseOthers<cr>
+
+"no easy6 window
+let g:spf13_no_easyWindows = 1
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
+map <C-H> <C-W>h
