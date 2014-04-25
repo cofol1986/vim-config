@@ -1,8 +1,11 @@
 "bundle cscope
-Bundle 'vim-scripts/cscope.vim' 
+"Bundle 'vim-scripts/cscope.vim' 
 Bundle 'wesleyche/SrcExpl'
 Bundle 'bufexplorer.zip'
 "Bundle 'vim-scripts/Conque-Shell' 
+"Bundle 'autoload_cscope.vim'
+"Bundle 'cofol1986/cscope-quickfix'
+Bundle 'cscope.vim'
 
 "vim-airline settings
 "let g:airline#extensions#tabline#enabled = 1

@@ -60,8 +60,6 @@ endfunction
 nmap <silent> <leader>l :call ToggleList("Location List", 'l')<CR>
 nmap <silent> <leader>c :call ToggleList("Quickfix List", 'c')<CR>
 
-"cscope settings
-
 
 "delete all other buffers
 
@@ -85,3 +83,6 @@ map <C-J> <C-W>j
 map <C-K> <C-W>k
 map <C-L> <C-W>l
 map <C-H> <C-W>h
+
+"no autochdir, it will mess up the cscope FIXME:seems no interferon
+"let g:spf13_no_autochdir = 1
